@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <title>js-block</title>
+  <script>
+    console.log('DOMContentLoaded1 addEventListener');
+    document.addEventListener("DOMContentLoaded", (event) => {
+      console.log("DOMContentLoaded!!! 1");
+    });
+  </script>
+  <style>
+    h1 {
+      color: green;
+    }
+  </style>
+  <script>console.log('style after');</script>
+  <link rel="stylesheet" href="./css-block-red.css">
+  <script>console.log('css-block-red.css after');</script>
+
+</head>
+<body>
+<link rel="stylesheet" href="./css-block-yellow.css">
+<script>console.log('css-block-yellow.css after');</script>
+
+<h1>JavaScriptがCSSDOM構築を待つことを確認</h1>
+<link rel="stylesheet" href="./css-block-blue.css">
+<script>console.log('css-block-blue.css after');</script>
+
+<script>
+  console.log('DOMContentLoaded2 addEventListener');
+  document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOMContentLoaded!!! 2");
+  });
+</script>
+
+</body>
+</html>
